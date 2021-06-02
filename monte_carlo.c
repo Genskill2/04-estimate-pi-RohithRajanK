@@ -48,7 +48,7 @@ float mc_pi(int n)
 		
 		float x = frandom();
 		float y = frandom();
-		if(sqrt(x*x+y*y)<1)
+		if(sqrt(pow(x,2)+pow(y,2)<1)
 		{
 			cir++;
 		}
