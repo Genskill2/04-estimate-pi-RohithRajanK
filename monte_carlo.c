@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float mc_pi(int count);
+float mc_pi(int n);
 
 float frandom() {
   long int q = random();
@@ -43,7 +43,7 @@ float mc_pi(int n)
 {
 	
 	float cir=0;
-	for(int i=1;i<n;i++)
+	for(int i=1;i<=n;i++)
 	{
 		
 		float x = frandom();
