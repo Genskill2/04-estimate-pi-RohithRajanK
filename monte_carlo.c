@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float mc_pi(int count);
+float mc_pi(int);
 
 float frandom() {
   long int q = random();
@@ -38,24 +38,20 @@ int main(void) {
     }
   }
 }
-
-float mc_pi(int n)
+float mc_pi(int count)
 {
-	
-	float cir=0;
-	for(int i=0;i<n;i++)
+	float circount=0;
+	for(int i=0;i<count;i++)
 	{
 		
 		float x = frandom();
 		float y = frandom();
 		if(sqrt(x*x+y*y)<1)
 		{
-			cir++;
+			circount++;
 		}
 	}
-	float area = ((4*cir)/n);
+	float area = ((4*circount)/count);
 	return area;
-
-		
 }
 
