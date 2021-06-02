@@ -3,7 +3,19 @@
 #include <stdio.h>
 #include <math.h>
 
-float wallis_pi(int n);
+float wallis_pi(int n)
+{
+	float temp,temp1,temp2,pei;
+	for(int i=1;i<=n;i++)
+{
+	temp=4*(pow(1,2));
+	temp1=temp-1;
+	temp2=temp/temp1;
+	pei=2*temp2;
+}
+return(pei);
+}
+
 int main(void) {
   float pi;
   for (int i=0; i<5; i++) {
@@ -22,16 +34,3 @@ int main(void) {
     }
   }
 }
-float wallis_pi(int n)
-{
-	float temp,temp1,temp2,pei;
-	for(int i=1;i<=n;i++)
-{
-	temp=4*(i*i);
-	temp1=temp-1;
-	temp2=temp/temp1;
-	pei=2*temp2;
-	return(pei);
-}
-}
-
