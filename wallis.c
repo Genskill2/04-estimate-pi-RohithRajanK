@@ -11,8 +11,8 @@ float wallis_pi(int n)
 	temp=4*(pow(1,2));
 	temp1=temp-1;
 	temp2=temp/temp1;
-	pei=2*temp2;
 }
+pei=2*temp2;
 return(pei);
 }
 
