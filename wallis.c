@@ -14,7 +14,7 @@ float wallis_pi(int n)
 	pei=2*temp2;
 	return(pei);
 }
-};
+}
 
 int main(void) {
   float pi;
