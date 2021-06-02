@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 
-float mc_pi(count);
+float mc_pi(int count);
 
 float frandom() {
   long int q = random();
