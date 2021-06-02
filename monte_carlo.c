@@ -4,7 +4,6 @@
 #include <math.h>
 
 float mc_pi(int n);
-
 float frandom() {
   long int q = random();
   float ret = (float)q/(float)RAND_MAX;
@@ -21,12 +20,10 @@ int main(void) {
   
   if (pi0 == pi1) {
       printf("Two separate estimates of pi are exactly the same. This is unlikely.\n");
-      abort();
     }
 
   if (fabs(pi0 - pi1) > 0.05) {
       printf("Two separate estimates %f and %f are too different.\n", pi0, pi1);
-      abort();
   }
 
     
@@ -34,28 +31,28 @@ int main(void) {
     pi0 = mc_pi(i);
     if (!(fabs(pi0 - M_PI) < 0.4)) {
       printf("Estimate with even %d iterations is %f which is not accurate enough.\n", i, pi0);
-      abort();
     }
   }
 }
-
 float mc_pi(int n)
 {
 	
-	float cir=0;
+	float circlepoint=0,temp,temp1,temp2;
+	float pei;
 	for(int i=1;i<=n;i++)
 	{
-		
-		float x = frandom();
-		float y = frandom();
-		if(sqrt(pow(x,2)+pow(y,2)<1)
-		{
-			cir++;
-		}
+	temp=frandom();
+	temp1=frandom();
+	temp2=sqrt(((temp-0)*(temp-0))-((temp1-0)*(temp1-0)));
+	if(temp2<1)
+	{
+	circlepoint=circlepoint+1;	
 	}
-	float area = ((4*cir)/n);
-	return area;
+	}
+	pei=((4*circlepoint)/n);
+	return(pei);
 
 		
 }
+
 
